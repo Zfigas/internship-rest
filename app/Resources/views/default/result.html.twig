@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<ul>
+{% for type, result in results %}
+     {% for key, value in result %}
+       {{ key + 1}}
+              <li>Owner name: {{ value.name }} </li> 
+              <li>Repo name: {{ value.repoName }} </li> 
+             <li>File name: {{ value.fileName }} </li>
+    {% endfor %}
+{% endfor %}
+{% endblock %}
+
+
+
+
